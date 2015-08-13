@@ -4,7 +4,7 @@ MAINTAINER "Mingcai SHEN <archsh@gmail.com>"
 ENV ELASTICSEARCH_VERSION 1.7.0
 
 # download and extract 
-ADD https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-${ELASTICSEARCH_VERSION}.tar.gz /opt
+ADD https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-${ELASTICSEARCH_VERSION}.tar.gz /opt/
 
 COPY docker-entrypoint.sh /
 
@@ -14,7 +14,7 @@ RUN yum install -y ca-certificates \
 
 RUN ln -s /opt/elasticsearch-${ELASTICSEARCH_VERSION} /opt/elasticsearch \
 	&& chmod +x /docker-entrypoint.sh \
-	&& RUN groupadd -r elasticsearch && useradd -r -g elasticsearch elasticsearch
+	&& groupadd -r elasticsearch && useradd -r -g elasticsearch elasticsearch
 
 COPY config /opt/elasticsearch/config
 
