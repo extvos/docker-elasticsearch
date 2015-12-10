@@ -1,6 +1,5 @@
 FROM extvos/java:7
 MAINTAINER "Mingcai SHEN <archsh@gmail.com>"
-
 ENV ELASTICSEARCH_VERSION 1.7.0
 
 # download and extract 
