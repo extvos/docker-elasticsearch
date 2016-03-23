@@ -24,6 +24,8 @@ ENV PATH /opt/elasticsearch/bin:$PATH
 
 VOLUME /opt/elasticsearch/data
 
+VOLUME /opt/elasticsearch/config
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 EXPOSE 9200 9300
